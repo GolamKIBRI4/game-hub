@@ -1,19 +1,25 @@
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Button, ButtonGroup, Grid, GridItem, Show } from "@chakra-ui/react";
 import { useState } from "react";
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
-  const toggle = () => {
-    setIsLoading(!isLoading);
-  };
   return (
-    <div>
-      {isLoading && (
-        <Button loading loadingText="loading">
-          Click me
-        </Button>
-      )}
-      <Button onClick={toggle}>Click Me!</Button>
-    </div>
+    <Grid
+      templateAreas={{
+        base: `"nav" "main"`,
+        lg: `"nav nav" "aside main"`,
+      }}
+    >
+      <GridItem area={"nav"} bg={"coral"}>
+        Nav
+      </GridItem>
+
+      <GridItem area="aside" bg="gold" display={{ base: "none", lg: "block" }}>
+        Aside
+      </GridItem>
+
+      <GridItem area={"main"} bg={"dodgerblue"}>
+        Main
+      </GridItem>
+    </Grid>
   );
 }
 

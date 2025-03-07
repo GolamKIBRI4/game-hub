@@ -1,4 +1,3 @@
-import React from "react";
 // Correct import for Chakra's color mode hook
 import { HStack, Switch } from "@chakra-ui/react";
 import { useColorMode } from "../components/ui/color-mode";

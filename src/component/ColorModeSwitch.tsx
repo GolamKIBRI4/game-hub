@@ -3,7 +3,7 @@ import { HStack, Switch } from "@chakra-ui/react";
 import { useColorMode } from "../components/ui/color-mode";
 
 const ColorModeSwitch = () => {
-  const { colorMode, toggleColorMode } = useColorMode(); // Correct hook usage
+  const { colorMode, toggleColorMode } = useColorMode(); //Built in Hook Provided by chakra
 
   return (
     <HStack>

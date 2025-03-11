@@ -5,11 +5,11 @@ import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 
 const GameGrid = () => {
-  const { games, errors, IsLoading } = useGames();
+  const { data, error, IsLoading } = useGames();
   const skeletons = [1, 2, 3, 4, 5, 6]; //number of skeleton we want to show
   return (
     <>
-      {errors && <p>{errors}</p>}
+      {error && <p>{error}</p>}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
         justifyContent={"center"}
@@ -22,7 +22,7 @@ const GameGrid = () => {
               <GameCardSkeleton />
             </GameCardContainer>
           ))}
-        {games.map((game) => (
+        {data.map((game) => (
           <GameCardContainer>
             <GameCard key={game.id} game={game} />
           </GameCardContainer>

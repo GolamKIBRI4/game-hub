@@ -32,6 +32,7 @@ function App() {
           onSelectedGenre={(genre) => {
             setSelectedGenre(genre);
           }}
+          selectedGenre={selectedGenre}
         />
       </GridItem>
 

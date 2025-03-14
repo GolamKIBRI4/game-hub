@@ -4,6 +4,8 @@ import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../hooks/useGenre";
+import PlatformSelector from "./PlatformSelector";
+import SelectPlatform from "./SelectPlatform";
 interface Props {
   selectedGenre: Genre | null;
 }
@@ -14,6 +16,7 @@ const GameGrid = ({ selectedGenre }: Props) => {
   return (
     <>
       {error && <p>{error}</p>}
+      <SelectPlatform />
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
         justifyContent={"center"}

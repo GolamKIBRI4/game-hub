@@ -7,7 +7,7 @@ interface Platform{
     slug:string
 }
 
-interface ParentPlatforms{
+export interface ParentPlatforms{
     id:number
     name:string
     slug:string

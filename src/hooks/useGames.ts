@@ -1,5 +1,6 @@
 import useData from "./useData";
 import { Genre } from "./useGenre";
+import { ParentPlatforms } from "./usePlatforms";
 //for card 
 export interface Platform{
   id:number
@@ -16,6 +17,6 @@ export interface Game {
 
 
 
-const useGames =(selectedGenre:Genre|null)=>useData<Game>("/games",{params:{genres:selectedGenre?.id}},[selectedGenre?.id])
+const useGames =(selectedGenre:Genre|null,selectedParentPlatform:ParentPlatforms|null)=>useData<Game>("/games",{params:{genres:selectedGenre?.id,platforms:selectedParentPlatform?.id}},[selectedGenre?.id,selectedParentPlatform?.id ])
 
 export default useGames  

@@ -1,6 +1,8 @@
-import { Box } from "lucide-react";
+interface Props {
+  onSelectSortOrder: (sortOrder: string) => void;
+}
 
-const SortSelector = () => {
+const SortSelector = ({ onSelectSortOrder }: Props) => {
   return (
     <div style={{ width: "200px", paddingLeft: "35px" }}>
       <select
@@ -10,16 +12,19 @@ const SortSelector = () => {
           width: "100%",
         }}
         defaultValue="sort"
+        onChange={(event) => {
+          onSelectSortOrder(event.target.value);
+        }}
       >
         <option value="sort" disabled>
           Sort Game
         </option>
-        <option value="Relevence">Relevence</option>
-        <option value="Date Added">Date Added</option>
-        <option value="Name">Name</option>
-        <option value="Release date">Release Date</option>
-        <option value="Popularity">Popularity</option>
-        <option value="Average Rating">Average Rating</option>
+
+        <option value="-added">Date Added</option>
+        <option value="name">Name</option>
+        <option value="-released">Release Date</option>
+        <option value="-metacritic">Popularity</option>
+        <option value="-rating">Average Rating</option>
       </select>
     </div>
   );

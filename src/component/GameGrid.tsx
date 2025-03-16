@@ -9,6 +9,7 @@ import SelectPlatform from "./SelectPlatform";
 import { useEffect } from "react";
 import { ParentPlatforms } from "../hooks/usePlatforms";
 import { GameQuery } from "../App";
+
 interface Props {
   gameQuery: GameQuery;
 }

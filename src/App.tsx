@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Genre } from "./hooks/useGenre";
 import { ParentPlatforms } from "./hooks/usePlatforms";
 import ParentPlatformList from "./component/ParentPlatformList";
+import SortSelector from "./component/SortSelector";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -51,6 +52,7 @@ function App() {
       </GridItem>
 
       <GridItem area={"main"}>
+        <SortSelector />
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>

@@ -8,20 +8,17 @@ import PlatformSelector from "./PlatformSelector";
 import SelectPlatform from "./SelectPlatform";
 import { useEffect } from "react";
 import { ParentPlatforms } from "../hooks/usePlatforms";
+import { GameQuery } from "../App";
 interface Props {
-  selectedGenre: Genre | null;
-  selectedParentPlatform: ParentPlatforms | null;
+  gameQuery: GameQuery;
 }
 
-const GameGrid = ({ selectedGenre, selectedParentPlatform }: Props) => {
-  const { data, error, IsLoading } = useGames(
-    selectedGenre,
-    selectedParentPlatform
-  );
+const GameGrid = ({ gameQuery }: Props) => {
+  const { data, error, IsLoading } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6]; //number of skeleton we want to show
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [selectedGenre, selectedParentPlatform]); // 👈 Runs whenever `selectedGenre` changes
+  }, [gameQuery]); // 👈 Runs whenever `selectedGenre` changes
   return (
     <>
       {error && <p>{error}</p>}

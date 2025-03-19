@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./component/NavBar";
 
 import GameGrid from "./component/GameGrid";

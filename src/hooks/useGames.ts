@@ -1,6 +1,4 @@
 import useData from "./useData";
-import { Genre } from "./useGenre";
-import { ParentPlatforms } from "./usePlatforms";
 import { GameQuery } from "../App";
 //for card 
 export interface Platform{

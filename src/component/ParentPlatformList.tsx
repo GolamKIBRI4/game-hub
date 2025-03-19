@@ -2,7 +2,7 @@ import usePlatforms, { ParentPlatforms } from "../hooks/usePlatforms";
 import { Button, HStack, ListItem, ListRoot } from "@chakra-ui/react";
 import GenreListItemContainer from "./GenreListItemContainer";
 import GenreListSkeleton from "./GenreListSkeleton";
-import getCroppedImage from "../services/image-url";
+
 import ParentPlatformIcon from "./ParentPlatformIcon";
 
 interface Props {

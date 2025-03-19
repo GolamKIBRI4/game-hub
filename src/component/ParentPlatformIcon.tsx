@@ -1,7 +1,5 @@
-import React from "react";
-import { ParentPlatforms } from "../hooks/usePlatforms";
 
-import { HStack, Icon, Text } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
 
 //importing react icons from font awesome
 import {

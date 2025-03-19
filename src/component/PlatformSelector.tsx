@@ -1,11 +1,8 @@
 import { Button, Menu, MenuItem, Portal } from "@chakra-ui/react";
-import { ParentPlatforms } from "../hooks/usePlatforms";
+
 import usePlatforms from "../hooks/usePlatforms";
 
-interface Props {
-  onSelectedParentPlatforms: (Parentplatform: ParentPlatforms) => void;
-}
-const PlatformSelector = ({ onSelectedParentPlatforms }: Props) => {
+const PlatformSelector = () => {
   const { data } = usePlatforms();
 
   return (

@@ -1,6 +1,6 @@
 ("use client");
 
-import { Portal, Select, createListCollection } from "@chakra-ui/react";
+import { Portal, Select} from "@chakra-ui/react";
 import usePlatforms from "../hooks/usePlatforms";
 
 const SelectPlatform = () => {

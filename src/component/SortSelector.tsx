@@ -4,7 +4,7 @@ interface Props {
 
 const SortSelector = ({ onSelectSortOrder }: Props) => {
   return (
-    <div style={{ width: "200px", paddingLeft: "35px" }}>
+    <div style={{ width: "200px", paddingLeft: "35px", paddingTop: "35px" }}>
       <select
         style={{
           padding: "8px 12px",

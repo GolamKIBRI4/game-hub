@@ -5,7 +5,7 @@ import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import { useEffect } from "react";
 import { GameQuery } from "../App";
- 
+
 interface Props {
   gameQuery: GameQuery;
 }
@@ -19,7 +19,11 @@ const GameGrid = ({ gameQuery }: Props) => {
 
   return (
     <>
-      {error && <p>{error}</p>}
+      {error && (
+        <div style={{ marginLeft: "500px" }}>
+          <p>{error}</p>
+        </div>
+      )}
 
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}

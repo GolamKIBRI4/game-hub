@@ -1,5 +1,5 @@
 // Correct import for Chakra's color mode hook
-import { HStack, Switch } from "@chakra-ui/react";
+import { HStack, Switch, Text } from "@chakra-ui/react";
 import { useColorMode } from "../components/ui/color-mode";
 
 const ColorModeSwitch = () => {
@@ -18,7 +18,9 @@ const ColorModeSwitch = () => {
           <Switch.Thumb />
         </Switch.Control>
         <Switch.Label>
-          {colorMode === "dark" ? "Dark Mood" : "Light Mood"}{" "}
+          <Text whiteSpace={"nowrap"}>
+            {colorMode === "dark" ? "Dark Mood" : "Light Mood"}{" "}
+          </Text>
         </Switch.Label>
       </Switch.Root>
     </HStack>

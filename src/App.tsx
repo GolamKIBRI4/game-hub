@@ -14,6 +14,7 @@ export interface GameQuery {
   platform: ParentPlatforms | null;
   sortOrder: string;
 }
+
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
   return (
@@ -58,6 +59,7 @@ function App() {
             setGameQuery({ ...gameQuery, sortOrder });
           }}
         />
+
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>

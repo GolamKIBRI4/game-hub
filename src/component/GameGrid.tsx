@@ -5,7 +5,7 @@ import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import { useEffect } from "react";
 import { GameQuery } from "../App";
-
+ 
 interface Props {
   gameQuery: GameQuery;
 }
@@ -15,7 +15,8 @@ const GameGrid = ({ gameQuery }: Props) => {
   const skeletons = [1, 2, 3, 4, 5, 6]; //number of skeleton we want to show
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [gameQuery]); // 👈 Runs whenever `selectedGenre` changes
+  }, [gameQuery]); // Runs whenever `selectedGenre` changes
+
   return (
     <>
       {error && <p>{error}</p>}

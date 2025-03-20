@@ -20,12 +20,15 @@ const useData=<T>(endpoints:string,requestConfig?:AxiosRequestConfig,deps?:any[]
         setIsLoading(true)
         apiClient.get<FetchResponse<T>>(endpoints, {signal:controller.signal,...requestConfig})
         .then((res)=>{
+
+            
             setData(res.data.results)
             setIsLoading(false)
         })
         .catch((err)=>{
             if(err instanceof CanceledError) return
             setErrors(err.message)
+
             setIsLoading(false)
         })
 

@@ -4,6 +4,7 @@ import GenreListItemContainer from "./GenreListItemContainer";
 import GenreListSkeleton from "./GenreListSkeleton";
 
 import ParentPlatformIcon from "./ParentPlatformIcon";
+import { Heading } from "@chakra-ui/react";
 
 interface Props {
   onSelectedParentPlatforms: (Parentplatform: ParentPlatforms) => void;
@@ -18,6 +19,7 @@ const ParentPlatformList = ({
   const SkeletonList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <>
+    <Heading fontSize={'3xl'} marginBottom={3} marginTop={3}>Platforms</Heading>
       <ListRoot>
         {IsLoading &&
           SkeletonList.map((item) => (
@@ -32,7 +34,9 @@ const ParentPlatformList = ({
                 <ParentPlatformIcon
                   ParentPlatformSlug={eachParentPlatform.slug}
                 />
-                <Button
+                <Button 
+                whiteSpace={'normal'}
+                textAlign={'left'}
                   fontWeight={
                     eachParentPlatform.id === selectedParentPlatform?.id
                       ? "extrabold"

@@ -12,6 +12,7 @@ interface Props {
 
 const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, IsLoading } = useGames(gameQuery);
+
   const skeletons = [1, 2, 3, 4, 5, 6]; //number of skeleton we want to show
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -20,9 +21,7 @@ const GameGrid = ({ gameQuery }: Props) => {
   return (
     <>
       {error && (
-        <div style={{ marginLeft: "500px" }}>
-          <p>{error}</p>
-        </div>
+        <p style={{ textAlign: "center", marginTop: "20px" }}>{error}</p>
       )}
 
       <SimpleGrid

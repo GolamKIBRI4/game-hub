@@ -59,7 +59,7 @@ function App() {
       </GridItem>
 
       <GridItem area={"main"}>
-        <Box paddingLeft= "35px">
+        <Box paddingLeft="35px">
           <GameHeading gameQuery={gameQuery} />
           <SortSelector
             onSelectSortOrder={(sortOrder) => {

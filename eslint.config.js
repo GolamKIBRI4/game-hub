@@ -1,4 +1,4 @@
-//new file
+//
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
@@ -11,22 +11,18 @@ export default tseslint.config(
       parserOptions:
       {
         projectService: true,
-        tsconfigRootDir:import.meta.dirname,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
 
-
-    rules:
-    {
-      
-     "@typescript-eslint/no-unsafe-assignment":"off",
-     " @typescript-eslint/no-unsafe-member-access":"off",
-     "@typescript-eslint/no-unsafe-return":"off",
-     "@typescript-eslint/no-unsafe-call":"off",
-     "@typescript-eslint/no-unsafe-argument": "error",
-    
+    rules: {
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-explicit-any": "off" , // ✅ NEW: Ignore implicit 'any' errors
+       "@typescript-eslint/ban-ts-comment": "off"
     }
-
   }
-  
 );

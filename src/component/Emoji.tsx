@@ -30,7 +30,7 @@ const Emoji = ({ rating }: Props) => {
       marginTop: 3,
     },
   };
-  if (rating < 3) return;
+  if (rating < 3) return null;
   return <Image {...emojiMap[rating]} />;
 };
 
